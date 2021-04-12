@@ -5,6 +5,11 @@
 	padding: 0px;
 }
 
+body
+{
+	min-width: 1280px;
+}
+
 header
 {
 	position: absolute;
