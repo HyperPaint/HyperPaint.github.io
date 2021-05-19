@@ -6,41 +6,59 @@
 	</head>
 	<body>
 		<header>
-			<div class = "flex-space">
+			<nav class = "flex-space">
 				<a href = "index.html">
 					<img src = "files/logo.png" class = "logo"></img>
 				</a>
-				<nav>
-					<ul class = "nav-items">
-						<li>
-							<a class = "nav-link">Афиша</a>
-							<a class = "nav-link">О театре</a>
-							<a class = "nav-link">Лица театра</a>
-							<a class = "nav-link">Посетителям</a>
-							<a class = "nav-link">Нормативные документы</a>
-							<a class = "nav-link">Контакты</a>
-						</li>
-					</ul>
-				</nav>
-				<a class = "nav-link lk">Личный кабинет</a>
-			</div>
+				<ul class = "nav-items flex-center main-nav">
+					<li>
+						<a class = "nav-link">Афиша</a>
+					</li>
+					<li>
+						<a class = "nav-link">О театре</a>
+					</li>
+					<li>
+						<a class = "nav-link">Лица театра</a>
+					</li>
+					<li>
+						<a class = "nav-link">Посетителям</a>
+					</li>
+					<li>
+						<a class = "nav-link">Документы</a>
+					</li>
+					<li>
+						<a class = "nav-link">Контакты</a>
+					</li>
+				</ul>
+				<select class = "alt-nav alt-nav-button" onchange="window.open(this.value,'_self');">
+					<option hidden></option>
+					<option value = "#_1" class = "alt-nav-link">Афиша</option>
+					<option value = "#_2" class = "alt-nav-link">О театре</option>
+					<option value = "#_3" class = "alt-nav-link">Лица театра</option>
+					<option value = "#_4" class = "alt-nav-link">Посетителям</option>
+					<option value = "#_5" class = "alt-nav-link">Документы</option>
+					<option value = "#_6" class = "alt-nav-link">Контакты</option>
+					<option value = "#_7" class = "alt-nav-link">Личный кабинет</option>
+				</select>
+				<a class = "nav-link main-nav lk">Личный кабинет</a>
+			</nav>
 		</header>
 		
 		<main>
 			<div class = "preview-container">
-				<img src = "preview/1.png" class = "preview-image">
+				<img src = "main/preview/1.png" class = "preview-image">
 				<div class = "preview-arrows flex-space">
-					<img src = "files/left.png" class = "preview-arrow arrow-left">
+					<img src = "files/left.png" class = "preview-arrow arrow-left scaled">
 					<p class = "preview-name">Балет Пахита</p>
-					<img src = "files/right.png" class = "preview-arrow arrow-right">
+					<img src = "files/right.png" class = "preview-arrow arrow-right scaled">
 				</div>
 			</div>
 			
 			<div class = "sheet">
 				<h1>Ближайщие события</h1>
 				<div class = "flex-space">
-					<div class = "poster box">
-						<img src = "poster/1.png" class = "poster-img box">
+					<div class = "poster box scaled">
+						<img src = "main/poster/1.png" class = "poster-img box">
 						<div class = "poster-desc">
 							<div>
 								<p>12 апреля, вт</p>
@@ -51,8 +69,8 @@
 							</div>
 						</div>
 					</div>
-					<div class = "poster box">
-						<img src = "poster/2.png" class = "poster-img box">
+					<div class = "poster box scaled">
+						<img src = "main/poster/2.png" class = "poster-img box">
 						<div class = "poster-desc">
 							<div>
 								<p>13 апреля, вт</p>
@@ -63,8 +81,8 @@
 							</div>
 						</div>
 					</div>
-					<div class = "poster box">
-						<img src = "poster/3.png" class = "poster-img box">
+					<div class = "poster box scaled">
+						<img src = "main/poster/3.png" class = "poster-img box">
 						<div class = "poster-desc">
 							<div>
 								<p>14 апреля, вт</p>
@@ -75,8 +93,8 @@
 							</div>
 						</div>
 					</div>
-					<div class = "poster box">
-						<img src = "poster/4.png" class = "poster-img box">
+					<div class = "poster box scaled">
+						<img src = "main/poster/4.png" class = "poster-img box">
 						<div class = "poster-desc">
 							<div>
 								<p>15 апреля, вт</p>
@@ -106,13 +124,13 @@
 				</div>
 				
 				<h1>Мы лучшие среди лучших</h1>
-				<div class = "best flex-space">
-					<div>
-						<img src = "best of the best/1.png" class = "box">
-						<p>Хабаровский краевой театр драмы распахнул свои двери перед зрителями в далеком 1946 году. В настоящее время театр драмы — одно из ведущих учреждения культуры Хабаровского края. Каждый сезон театр радует  дальневосточного зрителя новыми постановками и гастролями ведущих российских театральных коллективов.</p>
-						<p>За 70 лет  в театре драмы поставлено более 450 спектаклей из наследия мировой и современной драматургии. В числе  актерского состава театра народный артист России  С. Лычев, заслуженные артисты России А.Андрощук, С. Царик, Е. Путивец, Е. Монолатий.</p>
-					</div>
-					<img src = "best of the best/2.png" class = "box">
+				<div class = "flex-space">
+					<p>Хабаровский краевой театр драмы распахнул свои двери перед зрителями в далеком 1946 году. В настоящее время театр драмы — одно из ведущих учреждения культуры Хабаровского края. Каждый сезон театр радует  дальневосточного зрителя новыми постановками и гастролями ведущих российских театральных коллективов.</p>
+					<img src = "main/best/1.png" class = "best-img box scaled">
+				</div>
+				<div class = "flex-space">
+					<img src = "main/best/2.png" class = "best-img box scaled">
+					<p>За 70 лет  в театре драмы поставлено более 450 спектаклей из наследия мировой и современной драматургии. В числе  актерского состава театра народный артист России  С. Лычев, заслуженные артисты России А.Андрощук, С. Царик, Е. Путивец, Е. Монолатий.</p>
 				</div>
 				
 			</div>
@@ -120,7 +138,7 @@
 		
 		<footer>
 			<div class = "info flex-space">
-				<a href = "https://www.dvhab.ru/"><img src = "files/love.png"></a>
+				<a href = "https://www.dvhab.ru/"><img src = "files/love.png" class = "image-25"></a>
 				<div class = "about">
 					<p>Мы находимся в г. Хабаровск по адресу: ул. Красотулица, дом 100.</p>
 					<p>Театр открыт в понедельник и со среды по пятницу, вторник выходной!</p>
@@ -138,7 +156,7 @@
 					<img src = "files/logo.png" class = "logo"></img>
 				</a>
 				<nav>
-					<ul class = "nav-items">
+					<ul class = "nav-items main-nav">
 						<li>
 							<a class = "nav-link">Афиша</a>
 							<a class = "nav-link">О театре</a>
