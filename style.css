@@ -12,15 +12,23 @@ body
 
 header
 {
-	position: absolute;
 	height: 100px;
 	width: 100%;
-	background-image: linear-gradient(#000000FF, #00000088);
+	background-color: darkslategray;
+	background-image: linear-gradient(#80808080, #40404080);
 }
 
-nav
+.absolute-header
 {
-	
+	position: absolute;
+	top: 0px;
+	background-color: #00000000;
+	background-image: linear-gradient(#000000FF, #00000080);
+}
+
+.alt-nav
+{
+	display: none;
 }
 
 main
@@ -31,18 +39,33 @@ main
 footer
 {
 	background-color: darkslategray;
+	background-image: linear-gradient(#80808080, #40404080);
+}
+
+h1
+{
+	margin-top: 5vh;
+	font-size: 2em;
+	color: black;
+	text-transform: uppercase;
+	margin-bottom: 25px;
 }
 
 h2
 {
-	font-size: 1.5em;
+	font-size: 1.25em;
 	color: black;
 	margin-bottom: 10px;
 }
 
-p
+.big-text
 {
-	font-size: 1.2em;
+	font-size: 7.5vw;
+}
+
+p, a, input, select, label
+{
+	font-size: 1.25em;
 	color: black;
 }
 
@@ -64,6 +87,18 @@ hr
 	justify-content: center;
 }
 
+.center
+{
+	margin: auto;
+	align-self: center;
+	text-align: center;
+}
+
+.img
+{
+	object-fit: cover;
+}
+
 .logo
 {
 	height: 100px;
@@ -75,7 +110,7 @@ hr
 	align-self: center;
 }
 
-.nav-link
+.link
 {
 	font-size: 1.25em;
 	color: white;
@@ -84,9 +119,44 @@ hr
 	align-self: center;
 }
 
+.link-active
+{
+	border-radius: 7px;
+	border: dotted 1px white;
+	background-image: linear-gradient(#00000000, #80808080);
+}
+
 .lk
 {
 	margin-right: 25px;
+}
+
+.button, input, select
+{
+	display: block;
+	color: black;
+	padding: 10px;
+	margin: 10px;
+	border: 1px solid #F0F0F0;
+	border-bottom: 3px solid steelblue;
+	border-radius: 5px;
+	outline: none;
+	background-color: azure;
+}
+
+label
+{
+	padding: 10px;
+	margin: 10px;
+	width: 30%;
+	margin-right: 0px;
+}
+
+label + button, label + input, label + select
+{
+	display: inline-block;
+	width: 50%;
+	margin-left: 0px;
 }
 
 .preview-container
@@ -101,57 +171,87 @@ hr
 	margin: auto;
 }
 
+.preview-control
+{
+	position: relative;
+	width: 100%;
+	background-image: linear-gradient(#00000040, #000000FF);
+}
+
+.preview-control > p
+{
+	font-family: "Small Capital";
+	font-size: 2.5vw;
+	color: white;
+	text-align: center;
+	margin: auto;
+	padding: 10px;
+}
+
+.preview-name
+{
+	font-family: "Small Capital";
+	font-size: 5vw;
+	color: white;
+	text-transform: uppercase;
+	align-self: center;
+}
+
 .preview-arrow
 {
 	margin-left: 5vw;
 	margin-right: 5vw;
 	width: 10%;
-	height: 10vh;
 	align-self: center;
 }
 
 .sheet
 {
 	margin-left: 5vw;
-	margin-right: 10vw;
-	margin-top: 50px;
+	margin-right: 5vw;
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 
 .poster
 {
 	height: 35vw;
-	margin: 1vw;
-	background-color: white;
-}
-
-.poster-img
-{
-	position: absolute;
-	height: 35vw;
+	flex-basis: 20vw;
+	margin-bottom: 50px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
 }
 
 .poster-desc
 {
-	position: relative;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	width: 100%;
-	height: 90%;
-	margin: 10px;
+	height: 100%;
 }
 
-.poster-desc div p
+.poster-desc > * > p
 {
+	display: inline-block;
 	font-family: "Comic Sans MS", cursive;
 	font-size: 1.5vw;
 	font-weight: bold;
 	text-transform: uppercase;
-	text-shadow: 3px 3px 3px black;
+	text-shadow: 5px 5px 5px black;
 	color: white;
+	background-color: #00000080;
+	border-radius: 20px;
+	padding: 10px;
 }
 
-.news
+.poster-control
+{
+	background-image: linear-gradient(#80808080, #FFFFFFFF);
+}
+
+.fb-30
 {
 	margin: 1vw;
 	padding: 1vw;
@@ -165,11 +265,15 @@ hr
 	align-items: center;
 }
 
+.about
+{
+	width: 25vw;
+	margin: 10px;
+}
+
 .about p
 {
 	color: white;
-	width: 25vw;
-	margin: 10px;
 }
 
 @media (orientation: landscape)
@@ -177,10 +281,12 @@ hr
 	h1
 	{
 		margin-top: 5vh;
-		font-size: 2em;
-		color: black;
-		text-transform: uppercase;
-		margin-bottom: 10px;
+	}
+	
+	.img
+	{
+		margin: 2vw;
+		height: 30vh;
 	}
 	
 	.box
@@ -189,44 +295,20 @@ hr
 		box-shadow: 10px 10px 15px gray, -10px -10px 15px lightgray;
 	}
 	
-	.alt-nav
+	.preview-control
 	{
-		display: none;
-	}
-	
-	.preview-arrows
-	{
-		position: relative;
-		width: 100%;
 		height: 20vh;
 		margin-top: -20vh;
-		background-image: linear-gradient(#00000044, #000000FF);
+	}
+	
+	.preview-control > p
+	{
+		font-size: 2.5vw;
 	}
 		
 	.preview-arrow
 	{
-		margin-left: 5vw;
-		margin-right: 5vw;
-		width: 10%;
 		height: 5vh;
-		align-self: center;
-	}
-	
-	.preview-name
-	{
-		font-family: "Small Capital";
-		font-size: 7.5vh;
-		color: white;
-		text-transform: uppercase;
-		align-self: center;
-	}
-	
-	.best-img
-	{
-		margin: 2vw;
-		width: 30vw;
-		height: 30vh;
-		object-fit: cover;
 	}
 
 	.info img
@@ -240,10 +322,12 @@ hr
 	h1
 	{
 		margin-top: 2.5vh;
-		font-size: 2em;
-		color: black;
-		text-transform: uppercase;
-		margin-bottom: 10px;
+	}
+	
+	.img
+	{
+		margin: 2vh;
+		height: 30vw;
 	}
 	
 	.box
@@ -252,44 +336,15 @@ hr
 		box-shadow: 10px 10px 15px gray, -10px -10px 15px lightgray;
 	}
 	
-	.alt-nav
+	.preview-control
 	{
-		display: none;
-	}
-	
-	.preview-arrows
-	{
-		position: relative;
-		width: 100%;
 		height: 10vh;
 		margin-top: -10vh;
-		background-image: linear-gradient(#00000044, #000000FF);
 	}
 	
 	.preview-arrow
 	{
-		margin-left: 5vw;
-		margin-right: 5vw;
-		width: 5%;
 		height: 2.5vh;
-		align-self: center;
-	}
-	
-	.preview-name
-	{
-		font-family: "Small Capital";
-		font-size: 7vh;
-		color: white;
-		text-transform: uppercase;
-		align-self: center;
-	}
-	
-	.best-img
-	{
-		margin: 2vh;
-		width: 30vw;
-		height: 30vh;
-		object-fit: cover;
 	}
 
 	.info img
@@ -300,6 +355,24 @@ hr
 
 @media (max-width: 1000px)
 {
+	h1
+	{
+		margin-top: 1vh;
+	}
+	
+	h2
+	{
+		font-size: 1em;
+		color: black;
+		margin-bottom: 10px;
+	}
+
+	p
+	{
+		font-size: 1em;
+		color: black;
+	}
+	
 	.main-nav
 	{
 		display: none;
@@ -312,88 +385,40 @@ hr
 	
 	.alt-nav-button
 	{
-		border-radius: 25px;
-		background-image: url('files/alt-nav.png');
-		background-size: cover;
+		background-image: url(files/alt-nav.png);
+		background-size: contain;
 		background-repeat: no-repeat;
 		background-position: center center;
-		background-color: black;
-		min-width: 10vw;
-		border: solid black 1px;
-		outline: none;
+		
+		width: 20vw;
 	}
 	
-	.alt-nav-link
+	.alt-link-pool
 	{
-		font-size: 1.25em;
-		color: white;
+		display: none;
+		position: absolute;
+		top: 100px;
+		right: 0px;
+		background-color: #40404080;
+		width: 20vw;
+		border: solid gray 1px;
 	}
-	
-	.preview-name
-	{
-		font-family: "Small Capital";
-		font-size: 4vh;
-		color: white;
-		text-transform: uppercase;
-		align-self: center;
-	}
-	
-	.preview-arrows
-	{
-		position: relative;
-		width: 100%;
-		height: 8vh;
-		margin-top: -8vh;
-		background-image: linear-gradient(#00000044, #000000FF);
-	}
-	
-	h1
-	{
-		margin-top: 1vh;
-		font-size: 2em;
-		color: black;
-		text-transform: uppercase;
-		margin-bottom: 10px;
-	}
-	
-	h2
-	{
-		font-size: 0.75em;
-		color: black;
-		margin-bottom: 10px;
-	}
-
-	p
-	{
-		font-size: 0.75em;
-		color: black;
-	}
-	
-	.best-img
-	{
-		margin: 2vw;
-		width: 30vw;
-		height: 20vh;
-		object-fit: cover;
-	}
-	
 }
 
-.nav-link
+.alt-nav-button:hover .alt-link-pool
+{
+	display: block;
+}
+
+.link
 {
 	transition: all .5s ease;
 }
 
-.nav-link:hover
+.link:hover
 {
 	transition: all .5s ease;
 	color: steelblue;
-}
-
-.alt-nav-button:hover
-{
-	transition: .5s ease;
-	border: solid white 1px;
 }
 
 .scaled
@@ -405,4 +430,37 @@ hr
 {
 	transition: all .5s ease;
 	transform: scale(1.1);
+}
+
+.move-left
+{
+	transition: all .5s ease;
+}
+
+.move-left:hover
+{
+	transition: all .5s ease;
+	transform: translate(-2vw);
+}
+
+.move-right
+{
+	transition: all .5s ease;
+}
+
+.move-right:hover
+{
+	transition: all .5s ease;
+	transform: translate(2vw);
+}
+
+.button
+{
+	transition: all .5s ease;
+}
+
+.button:hover
+{
+	transition: all .5s ease;
+	background-color: mistyrose
 }
