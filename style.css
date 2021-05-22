@@ -389,7 +389,7 @@ label + button, label + input, label + select
 		background-size: contain;
 		background-repeat: no-repeat;
 		background-position: center center;
-		
+		min-width: 200px;
 		width: 20vw;
 	}
 	
@@ -400,6 +400,7 @@ label + button, label + input, label + select
 		top: 100px;
 		right: 0px;
 		background-color: #40404080;
+		min-width: 200px;
 		width: 20vw;
 		border: solid gray 1px;
 	}
