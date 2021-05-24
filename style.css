@@ -304,11 +304,15 @@ label + button, label + input, label + select
 	padding-bottom: 10px;
 }
 
+.poster-main
+{
+	width: 90vw;
+}
+
 .poster
 {
 	height: 35vw;
 	flex-basis: 100%;
-	margin: 1vw;
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center;
@@ -327,7 +331,7 @@ label + button, label + input, label + select
 {
 	display: inline-block;
 	font-family: "Comic Sans MS", cursive;
-	font-size: 1.5vw;
+	font-size: 1.2vw;
 	font-weight: bold;
 	text-transform: uppercase;
 	text-shadow: 5px 5px 5px black;
@@ -379,7 +383,7 @@ label + button, label + input, label + select
 	.img
 	{
 		margin: 2vw;
-		height: 50vh;
+		height: 30vh;
 	}
 	
 	.nf
@@ -408,11 +412,6 @@ label + button, label + input, label + select
 	{
 		height: 5vh;
 	}
-
-	.info img
-	{
-		height: 25vh;
-	}
 }
 
 @media (orientation: portrait)
@@ -425,7 +424,7 @@ label + button, label + input, label + select
 	.img
 	{
 		margin: 2vh;
-		height: 50vw;
+		height: 30vw;
 	}
 	
 	.nf
@@ -450,10 +449,6 @@ label + button, label + input, label + select
 		height: 2.5vh;
 	}
 
-	.info img
-	{
-		height: 25vw;
-	}
 }
 
 @media (max-width: 1000px)
