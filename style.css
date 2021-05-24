@@ -173,7 +173,7 @@ hr
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background-image: url(lk/image.png);
+	background-image: url(lk/image.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center;
@@ -453,7 +453,7 @@ label + button, label + input, label + select
 
 }
 
-@media (max-width: 1000px)
+@media (max-width: 1080px)
 {
 	h1
 	{
