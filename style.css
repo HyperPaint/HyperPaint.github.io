@@ -78,6 +78,11 @@ h2
 	font-size: 2.5vw;
 }
 
+.margin-1
+{
+	margin: 1vw;
+}
+
 p, input, select, label
 {
 	font-size: 1.25em;
@@ -108,11 +113,6 @@ hr
 {
 	display: flex;
 	justify-content: center;
-}
-
-.flex-center > *, .flex-space > *
-{
-	margin: 1vw;
 }
 
 .flex
@@ -304,15 +304,17 @@ label + button, label + input, label + select
 	padding-bottom: 10px;
 }
 
-.poster-main
+.anti-sheet
 {
-	width: 90vw;
+	margin-left: -2.5vw;
+	margin-right: -2.5vw;
 }
 
 .poster
 {
 	height: 35vw;
 	flex-basis: 100%;
+	margin: 1vw;
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center;
@@ -516,11 +518,18 @@ label + button, label + input, label + select
 		width: 20vw;
 		border: solid gray 1px;
 	}
+	
+	.alt-link-pool > *
+	{
+		margin: 0px;
+	}
+	
 }
 
 .alt-nav-button:hover .alt-link-pool
 {
-	display: block;
+	display: flex;
+	flex-direction: column;
 }
 
 .link
