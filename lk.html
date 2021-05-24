@@ -9,7 +9,7 @@
 		<meta name="keywords" content="театр, театр оффициальный, афиша театр, сайт театра, большой театр, театр сайт афиша, театр 2021, театр купить">
 	</head>
 	<body>
-		<header>
+		<header class = "absolute-header">
 			<nav class = "flex-space">
 				<a href = "index.html">
 					<img src = "files/logo.png" class = "logo" alt = "Logo"></img>
@@ -64,55 +64,37 @@
 		</header>
 		
 		<main>
-			<div class = "sheet">
-				
-				
-				
+			<div class = "lk-sheet">
+				<div class = "login rounded">
+					<table>
+						<tr>
+							<td>
+								<label for = "username">Имя аккаунта:</label>
+							</td>
+							<td>
+								<input type = "text" id = "username">
+							</td>
+						<tr>
+						</tr>
+							<td>
+								<label for = "password">Пароль:</label>
+							</td>
+							<td>
+								<input type = "password" id = "password">
+							</td>
+						</tr>
+					</table>
+					<div class = "flex-space">
+						<a href = "#">Проблемы со входом?</a>
+						<a href = "#">Забыли пароль?</a>
+					</div>
+					<input type = "button" class = "button" value = "Войти" id = "login">
+				</div>
 			</div>
 		</main>
 		
-		<footer>
-			<div class = "info flex-space">
-				<a href = "https://www.dvhab.ru/"><img src = "files/love.png" alt = "www.dvhab.ru"></a>
-				<div class = "about">
-					<p>Мы находимся в г. Хабаровск по адресу: ул. Красотулица, дом 100.</p>
-					<p>Театр открыт в понедельник и со среды по пятницу, вторник выходной!</p>
-					<p>Ждём вас с 10:00 до 20:00!</p>
-					<p>Вы можете позвонить нам по номеру 40-50-60.</p>
-				</div>
-				<div class = "about">
-					<p>Обнаружили ошибку? Есть предложения или замечания? Отлично! Напишите нам пару строк habtheatre@mail.ru</p>
-					<p>© 2021«Хабаровский театр».</p>
-				</div>
-			</div>
-			<hr/>
-			<div class = "flex-space">
-				<nav>
-					<ul class = "nav-items main-nav flex-center">
-						<li>
-							<a href = "playbill.html" class = "link">Афиша</a>
-						</li>
-						<li>
-							<a href = "about.html" class = "link">О театре</a>
-						</li>
-						<li>
-							<a href = "faces.html" class = "link">Лица театра</a>
-						</li>
-						<li>
-							<a href = "for-visitors.html" class = "link">Посетителям</a>
-						</li>
-						<li>
-							<a href = "documents.html" class = "link">Документы</a>
-						</li>
-						<li>
-							<a href = "contacts.html" class = "link">Контакты</a>
-						</li>
-					</ul>
-				</nav>
-				<a href = "index.html">
-					<img src = "files/logo.png" class = "logo" alt = "Logo"></img>
-				</a>
-			</div>
+		<footer class = "absolute-footer">
+
 		</footer>
 	</body>
 </html>

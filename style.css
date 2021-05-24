@@ -21,6 +21,7 @@ header
 .absolute-header
 {
 	position: absolute;
+	width: 100%;
 	top: 0px;
 	background-color: #00000000;
 	background-image: linear-gradient(#000000FF, #00000080);
@@ -42,9 +43,18 @@ footer
 	background-image: linear-gradient(#80808080, #40404080);
 }
 
+.absolute-footer
+{
+	position: absolute;
+	width: 100%;
+	bottom: 0px;
+	height: 100px;
+	background-color: #00000000;
+	background-image: linear-gradient(#00000080, #000000FF);
+}
+
 h1
 {
-	margin-top: 5vh;
 	font-size: 2em;
 	color: black;
 	text-transform: uppercase;
@@ -63,10 +73,23 @@ h2
 	font-size: 7.5vw;
 }
 
-p, a, input, select, label
+.medium-text
+{
+	font-size: 2.5vw;
+}
+
+p, input, select, label
 {
 	font-size: 1.25em;
 	color: black;
+}
+
+a
+{
+	font-size: 1em;
+	color: black;
+	font-weight: normal;
+	text-decoration: none;
 }
 
 hr
@@ -87,16 +110,30 @@ hr
 	justify-content: center;
 }
 
-.center
+.flex-center > *, .flex-space > *
 {
-	margin: auto;
-	align-self: center;
+	margin: 1vw;
+}
+
+.flex
+{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.text-center
+{
 	text-align: center;
 }
 
 .img
 {
 	object-fit: cover;
+}
+
+.icon
+{
+	padding: 10px;
 }
 
 .logo
@@ -129,6 +166,60 @@ hr
 .lk
 {
 	margin-right: 25px;
+}
+
+.lk-sheet
+{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-image: url(lk/image.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	height: 100vh;
+}
+
+.login
+{
+	padding: 1vw;
+	background-color: #F0F0F0F0;
+}
+
+.login > .button
+{
+	width: 95%;
+}
+
+ul > *
+{
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+li
+{
+	display: inline-block;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.none-list
+{
+	list-style: none;
+}
+
+.fancy-list
+{
+	list-style: disc outside;
+	color: steelblue;
+}
+
+.box-white
+{
+	margin: 1vw;
+	padding: 1vw;
+	flex-basis: 100%;
 }
 
 .button, input, select
@@ -207,17 +298,17 @@ label + button, label + input, label + select
 
 .sheet
 {
-	margin-left: 5vw;
-	margin-right: 5vw;
-	margin-top: 10px;
-	margin-bottom: 10px;
+	padding-left: 5vw;
+	padding-right: 5vw;
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 
 .poster
 {
 	height: 35vw;
-	flex-basis: 20vw;
-	margin-bottom: 50px;
+	flex-basis: 100%;
+	margin: 1vw;
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center;
@@ -251,12 +342,14 @@ label + button, label + input, label + select
 	background-image: linear-gradient(#80808080, #FFFFFFFF);
 }
 
-.fb-30
+.document-description
 {
-	margin: 1vw;
-	padding: 1vw;
-	background-color: white;
-	flex-basis: 30vw;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
 }
 
 .info
@@ -286,13 +379,18 @@ label + button, label + input, label + select
 	.img
 	{
 		margin: 2vw;
-		height: 30vh;
+		height: 50vh;
 	}
 	
-	.box
+	.nf
+	{
+		box-shadow: 10px 10px 15px gray, -10px -10px 15px lightgray;
+		background-color: white;
+	}
+	
+	.rounded
 	{
 		border-radius: 1vw;
-		box-shadow: 10px 10px 15px gray, -10px -10px 15px lightgray;
 	}
 	
 	.preview-control
@@ -327,13 +425,18 @@ label + button, label + input, label + select
 	.img
 	{
 		margin: 2vh;
-		height: 30vw;
+		height: 50vw;
 	}
 	
-	.box
+	.nf
+	{
+		box-shadow: 10px 10px 15px gray, -10px -10px 15px lightgray;
+		background-color: white;
+	}
+	
+	.rounded
 	{
 		border-radius: 1vh;
-		box-shadow: 10px 10px 15px gray, -10px -10px 15px lightgray;
 	}
 	
 	.preview-control
@@ -371,6 +474,20 @@ label + button, label + input, label + select
 	{
 		font-size: 1em;
 		color: black;
+	}
+	
+	.flex-space-alt
+	{
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column;
+	}
+
+	.flex-center-alt
+	{
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
 	}
 	
 	.main-nav
@@ -433,6 +550,17 @@ label + button, label + input, label + select
 	transform: scale(1.1);
 }
 
+.super-scaled
+{
+	transition: all .5s ease;
+}
+
+.super-scaled:hover
+{
+	transition: all .5s ease;
+	transform: scale(1.2);
+}
+
 .move-left
 {
 	transition: all .5s ease;
@@ -455,12 +583,12 @@ label + button, label + input, label + select
 	transform: translate(2vw);
 }
 
-.button
+.button, input, select
 {
 	transition: all .5s ease;
 }
 
-.button:hover
+.button:hover, input:hover, select:hover
 {
 	transition: all .5s ease;
 	background-color: mistyrose
